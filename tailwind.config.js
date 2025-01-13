@@ -11,7 +11,9 @@ module.exports = {
       },
       colors: {
         'primary-color': '#4B006E',
-        'Tableheading-color':'#5D6166'
+        'Tableheading-color':'#5D6166',
+        'Background-color':'#FFFFFF',
+        'Heading-color':'#020D21',
       },
     },
   },

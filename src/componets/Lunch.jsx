@@ -1,47 +1,20 @@
 import { useNavigate } from "react-router";
 
-import Data from "../utlis/Data";
+
 import { useContext } from "react";
 import { UserContext } from "./Createcontax";
 
 export default function Lunch() {
   const {
-    selectedata,
-    techname,
-    managedAppName,
+   
     validateForm,
-    selectedTech,
-    serverName,
-    selectedServer,
-    projectName,
-    ramSize,
-    selectedLocation,
-    locations,
-    getGBValue,
+    confing
   } = useContext(UserContext);
   const navgatiion = useNavigate();
   const handleClick = () => {
-    const selectedRowData = Data[selectedata];
+   
     if (validateForm()) {
-      const currentConfig = {
-        technology: techname[selectedTech] || selectedTech,
-        managedAppName,
-        serverName,
-        projectName,
-        webServer: selectedServer,
-        location: locations[selectedLocation],
-        ramSize: `${getGBValue(ramSize)}GB`,
-        selectplan: {
-          cpu: selectedRowData.CPU,
-          memory: selectedRowData.Memory,
-          ssdDisk: selectedRowData.SSDDisk,
-          transfer: selectedRowData.Transfer,
-          price: {
-            monthly: selectedRowData.Price.monthly,
-            hourly: selectedRowData.Price.hourly,
-          },
-        },
-      };
+      const currentConfig = {confing}
 
       // Log the complete configuration
       console.log(JSON.stringify(currentConfig, null, 2));

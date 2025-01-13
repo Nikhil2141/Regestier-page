@@ -12,7 +12,7 @@ export default function WebServer() {
   return (
     <>
       <div className="pt-6">
-        <h6 className="font-bold font-body text-lg leading-[24.51px] text-[#020D21]">
+        <h6 className="font-bold font-body text-lg leading-[24.51px] text-Heading-color">
           Choose Your Web Server
         </h6>
         <div className="flex gap-2 mt-4">

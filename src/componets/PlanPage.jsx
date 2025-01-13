@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import Data from "../utlis/Data";
 import select from "../../src/assets/most-selected.svg";
 import checkmark from "../../src/assets/Checkmark.india.svg";
+import Prev from "../../src/assets/left-pagination.svg";
+import Next from "../../src/assets/right-pagination.svg";
 
 import { UserContext } from "./Createcontax";
 export default function PlanPage() {
@@ -42,7 +44,7 @@ export default function PlanPage() {
         </h6>
       </div>
       <div className="mt-[16px]">
-        <table className="w-full  rounded border bg-[#FFFFFF] ">
+        <table className="w-full  rounded border bg-Background-color ">
           <thead>
             <tr className="bg-[#F5F5F5] border-[#E5E5E5] border-[1px] h-[43px] ">
               <th></th>
@@ -75,15 +77,25 @@ export default function PlanPage() {
                 ${
                   selectedata === globalIndex
                     ? "bg-[#EDE6F1] outline outline-[2px] outline-primary-color"
-                    : ""
+                    : "hover:bg-[#EDE6F1]"
                 }`}
                   onClick={() => handleRowClick(index)}
                 >
-                  <td>
-                    <div className="flex items-center justify-center">
-                      {data.selected && (
-                        <img src={select} alt="Selected" className="mr-2" />
-                      )}
+                  <td
+                    className={`${
+                      data.selected
+                        ? "flex justify-start items-center  pl-3"
+                        : "flex items-center pl-[40.69px] "
+                    }`}
+                  >
+                    {data.selected && (
+                      <img
+                        src={select}
+                        alt="Selected"
+                        className="mr-2 w-5 h-5"
+                      />
+                    )}
+                    <div>
                       <img src={data.image} alt="Google Cloud" />
                     </div>
                   </td>
@@ -100,7 +112,7 @@ export default function PlanPage() {
                     {data.Transfer}
                   </td>
                   <td>
-                    <div className="flex flex-col items-start px-4">
+                    <div className="flex flex-col items-start">
                       <div className="font-body font-semibold text-sm leading-[19.07px] text-[#000000]">
                         {data.Price.monthly}
                       </div>
@@ -131,34 +143,69 @@ export default function PlanPage() {
         </table>
       </div>
 
-      <div className="flex gap-2">
-        <button
+      <div className="flex mt-6 justify-end ">
+        <img
+          src={Prev}
           onClick={prevPage}
           disabled={currentPage === 1}
-          className={`px-3 py-1 rounded border ${
-            currentPage === 1
-              ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-              : "bg-white text-primary-color hover:bg-gray-50"
-          }`}
-        >
-          Previous
-        </button>
+          className="px-3 py-1 cursor-pointer"
+        ></img>
 
-        <span className="flex items-center px-3">
-          Page {currentPage} of {totalPages}
+        <span className="flex items-center">
+          <span
+            onClick={() => setCurrentPage(1)}
+            className={`px-3 py-1 mx-1 cursor-pointer rounded ${
+              currentPage === 1
+                ? "bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]"
+                : "text-[#5D6166] font-body font-normal text-sm leading-[19.07px]"
+            }`}
+          >
+           1
+          </span>
+          <span
+            onClick={() => setCurrentPage(2)}
+            className={`px-3 py-1 mx-1 cursor-pointer rounded ${
+              currentPage === 2
+                ? "bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]"
+                : "text-[#5D6166] font-body font-normal text-sm leading-[19.07px]"
+            }`}
+          >
+            2
+          </span>
+
+          {/* Show ellipsis */}
+          {currentPage > 2 && currentPage < totalPages ? (
+            <span
+              onClick={() => setCurrentPage(currentPage)}
+              className="bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
+            >
+            {currentPage}
+            </span>
+          ) : (
+            <span className="px-3 py-1 mx-1 text-[#5D6166] font-body font-normal text-sm leading-[19.07px]">
+              ...
+            </span>
+          )}
+
+          {/* Show last page */}
+          <span
+            onClick={() => setCurrentPage(totalPages)}
+            className={`px-3 py-1 mx-1 cursor-pointer rounded ${
+              currentPage === totalPages
+                ? "bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]"
+                : "text-[#5D6166] font-body font-normal text-sm leading-[19.07px]"
+            }`}
+          >
+            {totalPages}
+          </span>
         </span>
 
-        <button
+        <img
+          src={Next}
           onClick={nextPage}
           disabled={currentPage === totalPages}
-          className={`px-3 py-1 rounded border ${
-            currentPage === totalPages
-              ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-              : "bg-white text-primary-color hover:bg-gray-50"
-          }`}
-        >
-          Next
-        </button>
+          className="px-3 py-1 cursor-pointer"
+        ></img>
       </div>
     </>
   );

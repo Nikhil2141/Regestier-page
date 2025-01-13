@@ -1,16 +1,23 @@
-import { useLocation } from "react-router";
+import { useContext } from "react";
+import { UserContext } from "./Createcontax";
 
 export default function NextPage() {
-  const { state } = useLocation();
+  const {confing}=useContext(UserContext)
 
-  const { selectedLocation, serverSize } = state || {};
+
 
   return (
     <div>
-      <h1>Selected Details</h1>
-      <p>Location: {selectedLocation}</p>
+<p>Technology : {confing.technology}</p>
+<p>managedAppName : {confing.managedAppName}</p>
+<p>serverName : {confing.serverName}</p>
+<p>projectName : {confing.projectName}</p>
+<p>webServer : {confing.webServer}</p>
+<p>location : {confing.location}</p>
+<p>ramSize : {confing.ramSize}</p>
 
-      <p>Server Size: {serverSize} GB</p>
+
+
     </div>
   );
 }

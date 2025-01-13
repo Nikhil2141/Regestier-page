@@ -13,17 +13,17 @@ export default function Technology() {
   return (
     <>
       <div>
-        <h3 className="pt-6  font-bold text-[28px] leading-[38.13px] text-[#020D21] font-body">
+        <h3 className="pt-6  font-bold text-[28px] leading-[38.13px] text-Heading-color font-body">
           Create Server
         </h3>
       </div>
 
       <div>
-        <h6 className="pt-6 font-body font-bold text-lg leading-[24.51px] text-[#020D21]">
+        <h6 className="pt-6 font-body font-bold text-lg leading-[24.51px] text-Heading-color">
           Application & Server Details
         </h6>
         <div className="pt-4">
-          <span className="font-body font-normal text-sm leading-[19.07px] text-[#020D21]">
+          <span className="font-body font-normal text-sm leading-[19.07px] text-Heading-color">
             Select Technology
           </span>
           <div className="pt-1 flex gap-6">
@@ -34,7 +34,7 @@ export default function Technology() {
                 className={` w-[165px] h-[110px] border-[1px] rounded-md relative cursor-pointer ${
                   selectedTech === index
                     ? "border-primary-color border-[2px] Shadow-selectbox "
-                    : "border-gray-300"
+                    : "border-gray-300 hover:bg-[#EDE6F1]"
                 }`}
                 onClick={() => handleSelect(index)} // Handle image selection
               >

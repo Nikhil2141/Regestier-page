@@ -155,5 +155,162 @@ const Data = [
         },
         "selected": false
     },
+    {
+        id: "13",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "13 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": true
+    },
+    {
+        id: "14",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "14 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": true
+    },
+    {
+        id: "15",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "15 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": true
+    },
+    {
+        id: "16",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "16 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": false
+    },
+    {
+        id: "17",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "17 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": false
+    },
+    {
+        id: "18",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "18 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": false
+    },
+    {
+        id: "19",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "19 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": true
+    },
+    {
+        id: "20",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "20 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": false
+    },
+    {
+        id: "21",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "21 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": true
+    },
+    {
+        id: "22",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "22 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": false
+    },
+    {
+        id: "23",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "23 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": false
+    },
+
+    {
+        id: "24",
+        image: "../../src/assets/Google.svg",
+        CPU: "1CPU",
+        Memory: "24 GB",
+        SSDDisk: "30 GB",
+        Transfer: "2 TB",
+        Price: {
+            monthly: "$7/month",
+            hourly: "$0.0010/hourly"
+        },
+        "selected": true
+    },
 ]
 export default Data;

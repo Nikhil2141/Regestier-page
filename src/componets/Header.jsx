@@ -6,12 +6,12 @@ import arrow from "../../src/assets/arrow.svg";
 export default function Header() {
   return (
     <>
-      <div className="container min-w-full sticky top-0 z-10 w-full bg-[#FFFFFF] ">
+      <div className="container min-w-full sticky top-0 z-10 w-full bg-Background-color ">
         <div className="flex justify-between items-center h-full px-6 pt-3 pb-3  ">
           {/* Left Section - Logo */}
           <div className="flex gap-2 items-center w-[153.26px] cursor-pointer">
             <img className="logo" src={img} alt="logo" />
-            <p className="font-bold font-body text-[17.79px] leading-4 text-[primary-color] tracking-[2.4px]">
+            <p className="font-bold font-body text-[17.79px] leading-4 text-primary-color tracking-[2.4px]">
               SHARK CLUSTER
             </p>
           </div>

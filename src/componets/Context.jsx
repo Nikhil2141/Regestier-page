@@ -6,6 +6,7 @@ import img3 from "../../src/assets/magento.png";
 import img4 from "../../src/assets/php.png";
 import { UserContext } from "./Createcontax";
 import PropTypes from "prop-types";
+import Data from "../utlis/Data";
 
 ContextProvider.propTypes = {
   children: PropTypes.any,
@@ -70,6 +71,26 @@ export function ContextProvider({ children }) {
 
     return !Object.values(newErrors).some((error) => error !== "");
   };
+  const selectedRowData = Data[selectedata];
+  const confing = {
+     technology: techname[selectedTech] || selectedTech,
+     managedAppName,
+     serverName,
+     projectName,
+     webServer: selectedServer,
+     location: locations[selectedLocation],
+     ramSize: `${getGBValue(ramSize)}GB`,
+     selectplan: {
+       cpu: selectedRowData.CPU,
+       memory: selectedRowData.Memory,
+       ssdDisk: selectedRowData.SSDDisk,
+       transfer: selectedRowData.Transfer,
+       price: {
+         monthly: selectedRowData.Price.monthly,
+         hourly: selectedRowData.Price.hourly,
+       },
+     },
+   };
 
   const value = {
     // Technology
@@ -98,6 +119,7 @@ export function ContextProvider({ children }) {
     techname,
     getGBValue,
     gbValues,
+    confing,
 
     // Validation
     errors,
@@ -107,6 +129,7 @@ export function ContextProvider({ children }) {
 
     // Utils
   };
+ 
   return (
     <>
       <UserContext.Provider value={value}>{children}</UserContext.Provider>

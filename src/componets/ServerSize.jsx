@@ -6,7 +6,7 @@ export default function ServerSize() {
 
   return (
     <>
-      <h3 className="text-lg font-bold mt-6">Server Size</h3>
+      <h3 className="text-lg font-bold mt-6 text-Heading-color">Server Size</h3>
       <p className="text-sm mt-2">
         Select Your Server Size. You Can Always Scale Up As Needed.
       </p>
@@ -20,7 +20,7 @@ export default function ServerSize() {
         onChange={(e) => setRamSize(parseFloat(e.target.value))}
         className="w-full h-2 bg-purple-100 rounded-full appearance-none"
         style={{
-          background: `linear-gradient(to right, primary-color ${
+          background: `linear-gradient(to right,#4B006E ${
             ((ramSize - 1) / 127) * 100
           }%, #E0E0E0 ${((ramSize - 1) / 127) * 100}%)`,
         }}

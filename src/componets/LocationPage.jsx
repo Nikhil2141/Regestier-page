@@ -11,7 +11,7 @@ export default function LocationPage() {
     <>
       <div className="mt-6">
         <div>
-          <h6 className="font-bold font-body text-lg leading-[24.51px]">
+          <h6 className="font-bold font-body text-lg leading-[24.51px] text-Heading-color">
             Location
           </h6>
         </div>
@@ -22,7 +22,7 @@ export default function LocationPage() {
               className={`border-2 rounded-md relative ${
                 selectedLocation === index
                   ? "bg-[#EDE6F1] border-primary-color border-[2px] Shadow-selectbox "
-                  : ""
+                  : "hover:bg-[#EDE6F1]"
               }`}
               onClick={() => setSelectedLocation(index)} // When clicked, it selects the box
             >
