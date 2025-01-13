@@ -1,0 +1,46 @@
+.app-content{
+  background-color: rgba(75, 0, 110, 0.02);
+}
+  
+  .sidebar {
+    width: 68px; /* Fixed width for the sidebar */
+    background-color:#4B006E /* Optional sidebar background color */
+  }
+  
+  .main-box {
+    flex: 1; /* Remaining space after accounting for the sidebar */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+ 
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;  /* Makes it round */
+    background-color: #4B006E; /* Customize the thumb (dot) color */
+    cursor: pointer;
+    border: none;
+  }
+
+
+.container{box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+}
+.Shadow-selectbox{
+  box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .Btn{background: linear-gradient(90.57deg, #4B006E 0%, #9100D4 100%);
+  }
+  table, th, td {
+    /* border: 1px solid; */
+    text-align: start;
+  }
+td{
+  width: 150px;
+  height: 50px;
+}
+         
