@@ -81,22 +81,14 @@ export default function PlanPage() {
                 }`}
                   onClick={() => handleRowClick(index)}
                 >
-                  <td
-                    className={`${
-                      data.selected
-                        ? "flex justify-start items-center  pl-3"
-                        : "flex items-center pl-[40.69px] "
-                    }`}
-                  >
-                    {data.selected && (
-                      <img
-                        src={select}
-                        alt="Selected"
-                        className="mr-2 w-5 h-5"
-                      />
-                    )}
+                  <td className={`${data.selected ?"flex justify-start items-center  pl-3":"flex items-center pl-[40.69px] "}`}>
+                  {data.selected && (
+                        <img src={select} alt="Selected" className="mr-2 w-5 h-5" />
+                      )}
                     <div>
+                    
                       <img src={data.image} alt="Google Cloud" />
+                      
                     </div>
                   </td>
                   <td className="font-body font-normal text-[14px] leading-[19.07px]">
@@ -111,7 +103,7 @@ export default function PlanPage() {
                   <td className="font-body font-normal text-[14px] leading-[19.07px]">
                     {data.Transfer}
                   </td>
-                  <td>
+                  <td >
                     <div className="flex flex-col items-start">
                       <div className="font-body font-semibold text-sm leading-[19.07px] text-[#000000]">
                         {data.Price.monthly}
@@ -147,63 +139,64 @@ export default function PlanPage() {
         <img
           src={Prev}
           onClick={prevPage}
-          disabled={currentPage === 1}
           className="px-3 py-1 cursor-pointer"
         ></img>
 
-        <span className="flex items-center">
-          <span
+<span className="flex items-center">
+
+     <span
             onClick={() => setCurrentPage(1)}
             className={`px-3 py-1 mx-1 cursor-pointer rounded ${
-              currentPage === 1
-                ? "bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]"
-                : "text-[#5D6166] font-body font-normal text-sm leading-[19.07px]"
+              currentPage === 1 
+                ? 'bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]' 
+                : 'text-[#5D6166] font-body font-normal text-sm leading-[19.07px]'
             }`}
           >
-           1
+            1
           </span>
           <span
             onClick={() => setCurrentPage(2)}
             className={`px-3 py-1 mx-1 cursor-pointer rounded ${
-              currentPage === 2
-                ? "bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]"
-                : "text-[#5D6166] font-body font-normal text-sm leading-[19.07px]"
+              currentPage === 2 
+                ? 'bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]' 
+                : 'text-[#5D6166] font-body font-normal text-sm leading-[19.07px]'
             }`}
           >
             2
           </span>
-
+          
           {/* Show ellipsis */}
           {currentPage > 2 && currentPage < totalPages ? (
-            <span
-              onClick={() => setCurrentPage(currentPage)}
-              className="bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
-            >
-            {currentPage}
-            </span>
-          ) : (
-            <span className="px-3 py-1 mx-1 text-[#5D6166] font-body font-normal text-sm leading-[19.07px]">
-              ...
-            </span>
-          )}
+        <span
+          onClick={() => setCurrentPage(currentPage)}
+          className="bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
+        >
+          {currentPage}  
+        </span>
+      ) : (
+        <span className="px-3 py-1 mx-1 text-[#5D6166] font-body font-normal text-sm leading-[19.07px]">
+          ...
+        </span>
+      )}
 
+          
           {/* Show last page */}
           <span
             onClick={() => setCurrentPage(totalPages)}
             className={`px-3 py-1 mx-1 cursor-pointer rounded ${
-              currentPage === totalPages
-                ? "bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]"
-                : "text-[#5D6166] font-body font-normal text-sm leading-[19.07px]"
+              currentPage === totalPages 
+                ? 'bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]' 
+                : 'text-[#5D6166] font-body font-normal text-sm leading-[19.07px]'
             }`}
           >
             {totalPages}
           </span>
-        </span>
+    
+  </span>
 
         <img
           src={Next}
           onClick={nextPage}
-          disabled={currentPage === totalPages}
           className="px-3 py-1 cursor-pointer"
         ></img>
       </div>

@@ -62,7 +62,7 @@ export default function Technology() {
               className={`w-[165px] h-[110px] border-[1px] rounded-md relative flex justify-center cursor-pointer ${
                 selectedTech === "other"
                   ? "border-primary-color border-[2px] Shadow-selectbox"
-                  : "border-gray-300"
+                  : "border-gray-300 hover:bg-[#EDE6F1]"
               }`}
               onClick={() => handleSelect("other")} // Handle 'Other' option selection
             >

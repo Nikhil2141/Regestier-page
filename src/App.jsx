@@ -3,14 +3,14 @@ import LoginPage from "./componets/LoginPage";
 import RegsiterPage from "./componets/RegsiterPage";
 import {useState } from "react";
 import "./App.css";
-import Second from "./componets/Second";
-import Mainbox from "./componets/main-box";
-import Nextpage from "./componets/Nextpage";
-import Page from "./componets/Page3";
-import Page4 from "./componets/Page4";
-import Page5 from "./componets/Page5";
-import SharedLayout from "./componets/SharedOutlet";
-import { ContextProvider } from "./componets/Context";
+import Second from "../src/componets/Second";
+import Mainbox from "../src/componets/main-box";
+import Nextpage from "../src/componets/Nextpage";
+import Page from "../src/componets/Page3";
+import Page4 from "../src/componets/Page4";
+import Page5 from "../src/componets/Page5";
+import SharedLayout from "../src/componets/SharedOutlet";
+import { ContextProvider } from "../src/componets/Context";
 
 
 
