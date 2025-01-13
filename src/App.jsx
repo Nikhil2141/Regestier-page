@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import LoginPage from "./componets/LoginPage";
 import RegsiterPage from "./componets/RegsiterPage";
-import { useState } from "react";
+import {useState } from "react";
 import "./App.css";
 import Second from "./componets/Second";
 import Mainbox from "./componets/main-box";
@@ -10,6 +10,12 @@ import Page from "./componets/Page3";
 import Page4 from "./componets/Page4";
 import Page5 from "./componets/Page5";
 import SharedLayout from "./componets/SharedOutlet";
+import { ContextProvider } from "./componets/Context";
+
+
+
+
+
 
 function App() {
   const [value, setvalue] = useState({
@@ -20,6 +26,7 @@ function App() {
 
   return (
     <>
+    <ContextProvider>
       <Router>
         <Routes>
           <Route
@@ -41,6 +48,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
+      </ContextProvider>
     </>
   );
 }

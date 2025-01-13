@@ -1,19 +1,17 @@
+import { useContext } from "react";
 import badg1 from "../../src/assets/im.svg";
 import badg2 from "../../src/assets/im2.svg";
-import PropTypes from "prop-types";
-WebServer.propTypes = {
-  setSelectedServer: PropTypes.any, 
-  selectedServer: PropTypes.any, 
-  
-};
-export default function WebServer({setSelectedServer,selectedServer}){
-        const handleSelectServer = (server) => {
-        setSelectedServer(server); // Update the state to reflect the selected server
-      };
-    return(
-        <>
 
-<div className="pt-6">
+import { UserContext } from "./Createcontax";
+
+export default function WebServer() {
+  const { setSelectedServer, selectedServer } = useContext(UserContext);
+  const handleSelectServer = (server) => {
+    setSelectedServer(server); // Update the state to reflect the selected server
+  };
+  return (
+    <>
+      <div className="pt-6">
         <h6 className="font-bold font-body text-lg leading-[24.51px] text-[#020D21]">
           Choose Your Web Server
         </h6>
@@ -49,6 +47,6 @@ export default function WebServer({setSelectedServer,selectedServer}){
           </div>
         </div>
       </div>
-        </>
-    )
+    </>
+  );
 }
