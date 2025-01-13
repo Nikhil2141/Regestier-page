@@ -97,6 +97,7 @@ export function ContextProvider({ children }) {
     images,
     techname,
     getGBValue,
+    gbValues,
 
     // Validation
     errors,

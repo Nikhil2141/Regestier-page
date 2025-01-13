@@ -27,12 +27,11 @@ export default function ServerSize() {
       />
 
       <div className="grid grid-cols-8 gap-4 mt-1">
-        {gbValues &&
-          gbValues.map((gb) => (
-            <span key={gb} className="text-xs">
-              {gb}GB
-            </span>
-          ))}
+        {gbValues.map((gb) => (
+          <span key={gb} className="text-xs">
+            {gb}GB
+          </span>
+        ))}
       </div>
     </>
   );
