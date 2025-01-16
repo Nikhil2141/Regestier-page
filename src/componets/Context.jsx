@@ -12,6 +12,8 @@ ContextProvider.propTypes = {
   children: PropTypes.any,
 };
 
+
+
 export function ContextProvider({ children }) {
   const [selectedTech, setSelectedTech] = useState(0);
   const [selectedata, setdata] = useState(2);
@@ -73,24 +75,24 @@ export function ContextProvider({ children }) {
   };
   const selectedRowData = Data[selectedata];
   const confing = {
-     technology: techname[selectedTech] || selectedTech,
-     managedAppName,
-     serverName,
-     projectName,
-     webServer: selectedServer,
-     location: locations[selectedLocation],
-     ramSize: `${getGBValue(ramSize)}GB`,
-     selectplan: {
-       cpu: selectedRowData.CPU,
-       memory: selectedRowData.Memory,
-       ssdDisk: selectedRowData.SSDDisk,
-       transfer: selectedRowData.Transfer,
-       price: {
-         monthly: selectedRowData.Price.monthly,
-         hourly: selectedRowData.Price.hourly,
-       },
-     },
-   };
+    technology: techname[selectedTech] || selectedTech,
+    managedAppName,
+    serverName,
+    projectName,
+    webServer: selectedServer,
+    location: locations[selectedLocation],
+    ramSize: `${getGBValue(ramSize)}GB`,
+    selectplan: {
+      cpu: selectedRowData.CPU,
+      memory: selectedRowData.Memory,
+      ssdDisk: selectedRowData.SSDDisk,
+      transfer: selectedRowData.Transfer,
+      price: {
+        monthly: selectedRowData.Price.monthly,
+        hourly: selectedRowData.Price.hourly,
+      },
+    },
+  };
 
   const value = {
     // Technology
@@ -129,7 +131,7 @@ export function ContextProvider({ children }) {
 
     // Utils
   };
- 
+
   return (
     <>
       <UserContext.Provider value={value}>{children}</UserContext.Provider>

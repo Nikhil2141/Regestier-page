@@ -143,56 +143,53 @@ export default function PlanPage() {
         ></img>
 
 <span className="flex items-center">
+  {currentPage === 1 ? (
+    <>
+      <span
+        className="bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
+      >
+        1
+      </span>
+      <span
+        onClick={() => setCurrentPage(2)}
+        className="text-[#5D6166] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
+      >
+        2
+      </span>
+    </>
+  ) : (
+    <>
+      <span
+        onClick={() => setCurrentPage(currentPage - 1)}
+        className="text-[#5D6166] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
+      >
+        {currentPage - 1}
+      </span>
+      <span
+        className="bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
+      >
+        {currentPage}
+      </span>
+    </>
+  )}
 
-     <span
-            onClick={() => setCurrentPage(1)}
-            className={`px-3 py-1 mx-1 cursor-pointer rounded ${
-              currentPage === 1 
-                ? 'bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]' 
-                : 'text-[#5D6166] font-body font-normal text-sm leading-[19.07px]'
-            }`}
-          >
-            1
-          </span>
-          <span
-            onClick={() => setCurrentPage(2)}
-            className={`px-3 py-1 mx-1 cursor-pointer rounded ${
-              currentPage === 2 
-                ? 'bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]' 
-                : 'text-[#5D6166] font-body font-normal text-sm leading-[19.07px]'
-            }`}
-          >
-            2
-          </span>
-          
-          {/* Show ellipsis */}
-          {currentPage > 2 && currentPage < totalPages ? (
-        <span
-          onClick={() => setCurrentPage(currentPage)}
-          className="bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
-        >
-          {currentPage}  
-        </span>
-      ) : (
-        <span className="px-3 py-1 mx-1 text-[#5D6166] font-body font-normal text-sm leading-[19.07px]">
-          ...
-        </span>
-      )}
-
-          
-          {/* Show last page */}
-          <span
-            onClick={() => setCurrentPage(totalPages)}
-            className={`px-3 py-1 mx-1 cursor-pointer rounded ${
-              currentPage === totalPages 
-                ? 'bg-[#4B006E1F] text-[#4B006E] font-body font-normal text-sm leading-[19.07px]' 
-                : 'text-[#5D6166] font-body font-normal text-sm leading-[19.07px]'
-            }`}
-          >
-            {totalPages}
-          </span>
-    
-  </span>
+  {/* Show ellipsis if not near last page */}
+  {currentPage < totalPages -1 && (
+    <span className="px-3 py-1 mx-1 text-[#5D6166] font-body font-normal text-sm leading-[19.07px]">
+      ...
+    </span>
+  )}
+  
+  {/* Show last page if not on it */}
+  {currentPage < totalPages && (
+    <span
+      onClick={() => setCurrentPage(totalPages)}
+      className="text-[#5D6166] font-body font-normal text-sm leading-[19.07px] px-3 py-1 mx-1 cursor-pointer rounded"
+    >
+      {totalPages}
+    </span>
+  )}
+</span>
 
         <img
           src={Next}
